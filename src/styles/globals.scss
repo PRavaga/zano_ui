@@ -1,0 +1,36 @@
+// Global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3 all linear;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+// custom scrollbar
+
+::-webkit-scrollbar {
+    background: var(--bg-color);
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+// contianer for sections
+.container {
+    max-width: 885px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
