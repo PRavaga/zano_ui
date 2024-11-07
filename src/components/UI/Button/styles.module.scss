@@ -1,0 +1,56 @@
+.btn {
+    transition: 0.3s all ease;
+    cursor: pointer;
+    min-width: 197px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    color: #ffffff;
+
+    &:hover {
+        background-color: var(--primary-hover-color);
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+
+    &.outlined {
+        color: var(--text-color);
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+
+        &:hover {
+            background-color: var(--primary-color);
+        }
+    }
+
+    &.icon {
+        min-width: auto;
+        display: grid;
+        place-content: center;
+        padding: 12px 15px;
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+
+        &:hover {
+            background-color: var(--primary-color);
+
+            path {
+                stroke: #ffffff;
+            }
+        }
+
+        path {
+            stroke: var(--text-color);
+        }
+    }
+
+    &.block {
+        width: 100%;
+    }
+}

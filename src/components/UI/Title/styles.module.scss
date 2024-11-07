@@ -1,0 +1,47 @@
+.title {
+    max-width: max-content;
+    position: relative;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 34px;
+
+    &.centered {
+        margin: 0 auto;
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 85%;
+        height: 4px;
+        border-radius: 10px;
+        background: var(--primary-gradient);
+    }
+}
+
+// Responsive
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 24px;
+
+        &::before {
+            height: 3px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .title {
+        &.centered {
+            &::before {
+                width: 40%;
+            }
+        }
+    }
+}
