@@ -9,21 +9,21 @@ function Alert(props: AlertProps) {
     const types = {
         'success': {
             title: props.title || 'Success!',
-            subtitle: props.subtitle || 'Lorem ipsum dolor sit amet',
+            subtitle: props.subtitle || '',
             icon: <div className={styles.ui__alert__success}>
                 <SuccessIcon/>
             </div>
         },
         'error': {
             title: props.title || 'Fail!',
-            subtitle: props.subtitle || 'Lorem ipsum dolor sit amet',
+            subtitle: props.subtitle || '',
             icon: <div className={styles.ui__alert__error}>
                 <ErrorIcon/>
             </div>
         },
         'loading': {
             title: props.title || 'Loading...',
-            subtitle: props.subtitle || 'Lorem ipsum dolor sit amet',
+            subtitle: props.subtitle || '',
             icon: <div className={styles.ui__alert__loader}><Preloader/></div>
         },
         "none": null
