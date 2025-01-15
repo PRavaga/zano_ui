@@ -13,6 +13,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "outDir": "./dist",
     "plugins": [
       {
         "name": "next"
