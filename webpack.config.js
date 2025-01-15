@@ -67,9 +67,9 @@ export default {
         ],
     },
     externals: {
-        'react': 'react',
-        'react-dom': 'react-dom',
-        'next': 'next',
+        react: 'React', 
+        'react-dom': 'ReactDOM',
+        next: 'next', 
     },
     experiments: {
         outputModule: true,
