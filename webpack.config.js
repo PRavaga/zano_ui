@@ -13,7 +13,7 @@ export default {
         filename: 'index.js',
         library: {
             name: 'zano_ui',
-            type: 'umd'
+            type: 'module'
         },
         globalObject: 'this',
         publicPath: '/',
