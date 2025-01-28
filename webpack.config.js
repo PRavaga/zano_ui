@@ -13,11 +13,11 @@ export default {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         library: {
-            name: "zano_ui",
-            type: 'umd'
+            type: 'module'
         },
-        globalObject: 'this',
-        publicPath: '/',
+        environment: {
+            module: true,
+        },
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
