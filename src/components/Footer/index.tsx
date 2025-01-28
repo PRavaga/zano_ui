@@ -53,39 +53,41 @@ const links: {
 function Footer() {
 
 
-    const [selectedLink, setRecognizedLink] = useState<SelectedLink | null>(null);
+    // const [selectedLink, setRecognizedLink] = useState<SelectedLink | null>(null);
 
-    useEffect(() => {
-        const currentDomain = window.location.hostname;
-        const match = links.find(link => link.link.includes(currentDomain));
-        setRecognizedLink(match ? match.type : null);
-    }, []);
+    // useEffect(() => {
+    //     const currentDomain = window.location.hostname;
+    //     const match = links.find(link => link.link.includes(currentDomain));
+    //     setRecognizedLink(match ? match.type : null);
+    // }, []);
 
     
-    return (
-        <footer className={styles.footer}>
-            <div className={styles.footer__refs}>
-                {links.map(e => (
-                    <Link
-                        className={
-                            classes(
-                                (e.type === selectedLink) && styles.footer__ref_selected,
-                                e.disabled && styles.footer__ref_disabled
-                            )
-                        }
-                        key={e.type}
-                        href={e.link}
-                        rel="noopener noreferrer"
-                    >
-                        {e.title}
-                    </Link>
-                ))}
-            </div>
-            <div className={styles.footer__copyright}>
-                <p>Copyright © {(new Date()).getFullYear()} ZANO.org</p>
-            </div>
-        </footer>
-    );
+    // return (
+    //     <footer className={styles.footer}>
+    //         <div className={styles.footer__refs}>
+    //             {links.map(e => (
+    //                 <Link
+    //                     className={
+    //                         classes(
+    //                             (e.type === selectedLink) && styles.footer__ref_selected,
+    //                             e.disabled && styles.footer__ref_disabled
+    //                         )
+    //                     }
+    //                     key={e.type}
+    //                     href={e.link}
+    //                     rel="noopener noreferrer"
+    //                 >
+    //                     {e.title}
+    //                 </Link>
+    //             ))}
+    //         </div>
+    //         <div className={styles.footer__copyright}>
+    //             <p>Copyright © {(new Date()).getFullYear()} ZANO.org</p>
+    //         </div>
+    //     </footer>
+    // );
+
+    return <></>;
 }
 
 export default Footer;
