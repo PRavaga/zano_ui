@@ -18,12 +18,12 @@
     "incremental": true,
     "emitDeclarationOnly": true,
     "declaration": true,
-    "outDir": "./dist/types",
     "plugins": [
       {
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
