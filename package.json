@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "main": "./scr/index.ts",
   "scripts": {
     "clean": "rimraf dist",
     "build:types": "tsc --project tsconfig.json && rollup --config rollup.config.mjs",
