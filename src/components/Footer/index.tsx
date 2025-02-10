@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { classes } from '../../utils';
 import styles from "./styles.module.scss";
@@ -35,7 +36,8 @@ const links: {
         {
             title: "Auction",
             type: "auction",
-            link: "https://auction.zano.org"
+            link: "https://auction.zano.org",
+            disabled: true
         },
         {
             title: "Messenger",
@@ -60,7 +62,7 @@ function Footer() {
         setRecognizedLink(match ? match.type : null);
     }, []);
 
-    
+
     return (
         <footer className={styles.footer}>
             <div className={styles.footer__refs}>
@@ -85,6 +87,7 @@ function Footer() {
             </div>
         </footer>
     );
+
 }
 
 export default Footer;
