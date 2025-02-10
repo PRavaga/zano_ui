@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { classes } from '@/utils';
+import { classes } from '../../utils';
 import styles from "./styles.module.scss";
 import Link from 'next/link';
 
@@ -36,7 +36,8 @@ const links: {
         {
             title: "Auction",
             type: "auction",
-            link: "https://auction.zano.org"
+            link: "https://auction.zano.org",
+            disabled: true
         },
         {
             title: "Messenger",
@@ -61,33 +62,32 @@ function Footer() {
         setRecognizedLink(match ? match.type : null);
     }, []);
 
-    
-    // return (
-    //     <footer className={styles.footer}>
-    //         <div className={styles.footer__refs}>
-    //             {links.map(e => (
-    //                 <Link
-    //                     className={
-    //                         classes(
-    //                             (e.type === selectedLink) && styles.footer__ref_selected,
-    //                             e.disabled && styles.footer__ref_disabled
-    //                         )
-    //                     }
-    //                     key={e.type}
-    //                     href={e.link}
-    //                     rel="noopener noreferrer"
-    //                 >
-    //                     {e.title}
-    //                 </Link>
-    //             ))}
-    //         </div>
-    //         <div className={styles.footer__copyright}>
-    //             <p>Copyright © {(new Date()).getFullYear()} ZANO.org</p>
-    //         </div>
-    //     </footer>
-    // );
 
-    return <></>;
+    return (
+        <footer className={styles.footer}>
+            <div className={styles.footer__refs}>
+                {links.map(e => (
+                    <Link
+                        className={
+                            classes(
+                                (e.type === selectedLink) && styles.footer__ref_selected,
+                                e.disabled && styles.footer__ref_disabled
+                            )
+                        }
+                        key={e.type}
+                        href={e.link}
+                        rel="noopener noreferrer"
+                    >
+                        {e.title}
+                    </Link>
+                ))}
+            </div>
+            <div className={styles.footer__copyright}>
+                <p>Copyright © {(new Date()).getFullYear()} ZANO.org</p>
+            </div>
+        </footer>
+    );
+
 }
 
 export default Footer;
