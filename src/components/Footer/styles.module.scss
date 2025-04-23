@@ -6,7 +6,7 @@
     border-top: 1px solid var(--zano-ui-footer-border-color);
 
     &__wrapper {
-        max-width: 1154px;
+        max-width: 1160px;
         margin: 0 auto;
     }
 
@@ -65,7 +65,7 @@
                 display: grid;
                 row-gap: 16px;
                 column-gap: 50px;
-                
+
                 .link {
                     transition: .2s all ease;
                     text-decoration: none;
@@ -85,12 +85,18 @@
                 &.grid {
                     grid-template-columns: repeat(2, 1fr);
                 }
+
+                svg {
+                    path {
+                        fill: var(--zano-ui-primary-color);
+                    }
+                }
             }
         }
     }
 
     &__donation {
-        max-width: 408px;
+        max-width: 420px;
 
         &_content {
             display: flex;
@@ -133,7 +139,6 @@
                         border: none;
                         outline: none;
                         margin-left: 6px;
-                        line-height: 150%;
                     }
                 }
             }
