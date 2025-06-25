@@ -14,9 +14,9 @@ import TwitterIcon from "../../assets/twitter_ico.svg";
 import TelegramIcon from "../../assets/telegram_ico.svg";
 import YoutubeIcon from "../../assets/youtube_ico.svg";
 import RedditIcon from "../../assets/reddit_ico.svg";
+import CheckedIcon from "../../assets/checked.svg";
 import { DonationItem, FooterSection } from "./types";
 import { classes } from "../../utils";
-import CheckedIcon from "../../assets/checked.svg";
 import { useRef, useState } from "react";
 
 const footerLinks: FooterSection[] = [
@@ -105,7 +105,8 @@ function Footer() {
                                 <div className={classes(styles.footer__links_item__links, section.grid && styles.grid)}>
                                     {section.links.map((link, j) => (
                                         <div
-                                            style={{ 
+                                            key={j}
+                                            style={{
                                                 pointerEvents: link.disabled ? "none" : "auto",
                                                 opacity: link.disabled ? 0.5 : 1,
                                             }}

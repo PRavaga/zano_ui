@@ -16,7 +16,7 @@ const Modal = ({ children, title, onClose, show }: PopupProps) => {
             <div onClick={(e) => e.stopPropagation()} className={styles.popup}>
                 <div className={styles.popup__header}>
                     <h5>{title}</h5>
-                    <button  className={styles.xmark} onClick={onClose}>
+                    <button className={styles.xmark} onClick={onClose}>
                         <XmarkIcon />
                     </button>
                 </div>
@@ -26,7 +26,7 @@ const Modal = ({ children, title, onClose, show }: PopupProps) => {
                 </div>
             </div>
         </div>,
-        document.body 
+        document.body
     );
 };
 

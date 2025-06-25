@@ -12,20 +12,20 @@ function Alert(props: AlertProps) {
             title: props.title || 'Success!',
             subtitle: props.subtitle || '',
             icon: <div className={styles.ui__alert__success}>
-                <SuccessIcon/>
+                <SuccessIcon />
             </div>
         },
         'error': {
             title: props.title || 'Fail!',
             subtitle: props.subtitle || '',
             icon: <div className={styles.ui__alert__error}>
-                <ErrorIcon/>
+                <ErrorIcon />
             </div>
         },
         'loading': {
             title: props.title || 'Loading...',
             subtitle: props.subtitle || '',
-            icon: <div className={styles.ui__alert__loader}><Preloader/></div>
+            icon: <div className={styles.ui__alert__loader}><Preloader /></div>
         },
         "none": null
     };
@@ -38,7 +38,7 @@ function Alert(props: AlertProps) {
         return (
             <div className={styles.ui__alert}>
                 <div className={styles.ui__alert__close} onClick={props.close}>
-                    <SmallCrossIcon/>
+                    <SmallCrossIcon />
                 </div>
                 {currentType && currentType.icon}
                 <div className={styles.ui__alert__data}>
@@ -50,7 +50,7 @@ function Alert(props: AlertProps) {
     }
 
     return (
-        <Popup  
+        <Popup
             noPointer={true}
             Content={PopupContent}
             settings={{}}
