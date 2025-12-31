@@ -10,28 +10,6 @@ declare module "*.svg" {
     const src: string;
     export default src;
 }
-declare module "next/link" {
-    import * as React from "react";
-    import { UrlObject } from "url";
-
-    type Url = string | UrlObject;
-
-    interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-        href: Url;
-        as?: Url;
-        replace?: boolean;
-        scroll?: boolean;
-        shallow?: boolean;
-        prefetch?: boolean;
-        locale?: string | false;
-        legacyBehavior?: boolean;
-        passHref?: boolean;
-    }
-
-    const Link: React.FC<LinkProps>;
-
-    export default Link;
-}
 
 declare module "next/image" {
     import * as React from "react";
