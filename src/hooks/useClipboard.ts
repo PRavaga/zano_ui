@@ -13,7 +13,7 @@ export const useClipboard = ({ resetAfter = 3000 }: UseClipboardOptions = {}) =>
         async (text: string, index?: number) => {
             try {
                 await navigator.clipboard.writeText(text);
-                if (index) setCopiedIndex(index);
+                if (index !== undefined) setCopiedIndex(index);
                 setCopied(true);
 
                 if (timerRef.current) {
